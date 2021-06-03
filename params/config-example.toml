@@ -1,0 +1,7 @@
+#
+[FSN]
+DBURL = "localhost:27027"
+DBName = "Mainnet"
+UserName = "admin"
+Password = "123456"
+
