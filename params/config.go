@@ -59,7 +59,7 @@ func GetScanConfig() *MongodbConfig {
 	case "HT":
 		return scanConfig.HT
 	default:
-		return nil
+		return scanConfig.FSN
 	}
 }
 

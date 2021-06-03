@@ -1,6 +1,6 @@
 # gethscan
 
-scan eth-like blockchain and filter specified transactions
+scan mongodb (block and transactions) table blocknumber
 
 ## building
 
@@ -8,8 +8,8 @@ scan eth-like blockchain and filter specified transactions
 make
 ```
 
-this will generate a binary file `./build/bin/gethscana`,  
-and an example config file of `scanswap` subcommand [config-example.toml](https://github.com/jowenshaw/gethscan/blob/master/params/config-example.toml)
+this will generate a binary file `./build/bin/gethscan`,
+and an example config file of `scanmongodb` subcommand [config-example.toml](https://github.com/weijun-sh/market-mongodb-check/blob/master/params/config-example.toml)
 
 ## help
 
@@ -30,7 +30,7 @@ VERSION:
    0.1.0
 
 COMMANDS:
-   scanswap  scan cross chain swaps
+   scanmongodb  scan mongodb
    help, h   Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
@@ -41,29 +41,24 @@ GLOBAL OPTIONS:
    --version, -v      print the version (default: false)
 ```
 
-#### gethscan scanswap
+#### gethscan scanmongodb
 
 ```shell
-./build/bin/gethscan scanswap -h
+./build/bin/gethscan scanmongodb -h
 ```
 
 ```text
 NAME:
-   gethscan scanswap - scan cross chain swaps
+   gethscan scanmongodb - scan mongodb
 
 USAGE:
-   gethscan scanswap [command options]
+   gethscan scanmongodb [command options]
 
 DESCRIPTION:
-   scan cross chain swaps
+   scan mongodb
 
 OPTIONS:
+   --chain value             chain selected (default: FSN, others: BSC/FTM/HT)
    --config value, -c value  Specify config file
-   --gateway value           gateway URL to connect
-   --scanReceipt             scan transaction receipt instead of transaction (default: false)
-   --start value             start height (start inclusive) (default: 0)
-   --end value               end height (end exclusive) (default: 0)
-   --stable value            stable height (default: 5)
-   --jobs value              number of jobs (default: 4)
    --help, -h                show help (default: false)
 ```
